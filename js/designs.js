@@ -16,6 +16,12 @@ $(function() {
     }
 });
 
+$('#pixel_canvas').on('click', function(evt){
+    var color = $('#colorPicker').val();
+    $(evt.target).css('background', color);
+});
+
+
 
 
 

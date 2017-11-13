@@ -1,10 +1,4 @@
 
-// Select color input
-// Select size input
-
-// When size is submitted by the user, call makeGrid()
-
-
 function makeGrid(){
 
     // set the variable to the user input when "submit" clicked
@@ -16,9 +10,9 @@ function makeGrid(){
         var column = $('#input_width').val();
 
     //  nested for loop that adds rows and then columns
-        for (var i = 0; i < row; i++) {
+        for (let i = 0; i < row; i++) {
             $('#pixel_canvas').append('<tr id=rows></tr>');
-            for (var c = 0; c < column; c++) {
+            for (let c = 0; c < column; c++) {
                 $('tr:last').append('<td id=columns></td>');
             };
         };
@@ -31,15 +25,8 @@ function makeGrid(){
         var color = $('#colorPicker').val();
         $(evt.target).css('background', color);
     });
-
-    // clear the user input so that only one grid shows up at a time
-    // $(function(){
-    //     $("#pixel_canvas").remove();
-    // });
 };
 
-
-//
 makeGrid();
 
 

@@ -6,8 +6,8 @@ function makeGrid(){
         // removes previous user input for table size
         $("tr").detach();
 
-        var row = $('#input_height').val();
-        var column = $('#input_width').val();
+        const row = $('#input_height').val();
+        const column = $('#input_width').val();
 
     //  nested for loop that adds rows and then columns
         for (let i = 0; i < row; i++) {

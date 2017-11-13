@@ -21,13 +21,15 @@ function makeGrid(){
     // prevents the grid from disappearing
         event.preventDefault();
     }));
+
+    //event listener that changes the color of the cell when clicked on
+    $('#pixel_canvas').on('click', function(evt){
+        var color = $('#colorPicker').val();
+        $(evt.target).css('background', color);
+    });
 };
 
-//event listener that changes the color of the cell when clicked on
-$('#pixel_canvas').on('click', function(evt){
-    var color = $('#colorPicker').val();
-    $(evt.target).css('background', color);
-});
+
 //
 makeGrid();
 

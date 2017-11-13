@@ -6,8 +6,12 @@
 
 
 function makeGrid(){
+
     // set the variable to the user input when "submit" clicked
     $('input[type="submit"]').on('click', (function() {
+        // removes previous user input for table size
+        $("tr").detach();
+
         var row = $('#input_height').val();
         var column = $('#input_width').val();
 
@@ -27,6 +31,11 @@ function makeGrid(){
         var color = $('#colorPicker').val();
         $(evt.target).css('background', color);
     });
+
+    // clear the user input so that only one grid shows up at a time
+    // $(function(){
+    //     $("#pixel_canvas").remove();
+    // });
 };
 
 

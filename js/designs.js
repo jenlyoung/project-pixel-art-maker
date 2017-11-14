@@ -2,11 +2,12 @@ const table = $('#pixel_canvas');
 
 function makeGrid() {
 
-    // set the variable to the user input when "submit" clicked
+    // set the variable to the user input
     const row = $('#input_height').val();
     const column = $('#input_width').val();
 
-    table.children().detach();
+    // clears the grid each time the submit button is clicked
+    table.children().remove();
 
     // nested for loop that adds rows and then columns
     for (let i = 0; i < row; i++) {
@@ -17,7 +18,7 @@ function makeGrid() {
     }
 }
 
-// event listener that calls madeGrid() when the "submit" button is clicked
+// event listener that calls makeGrid() when the "submit" button is clicked
 $('input[type="submit"]').on('click', (function () {
     makeGrid();
     // prevents the grid from disappearing
@@ -28,7 +29,7 @@ $('input[type="submit"]').on('click', (function () {
 table.on('click', function (evt) {
     const color = $('#colorPicker').val();
     $(evt.target).css('background', color);
-})
+});
 
 
 

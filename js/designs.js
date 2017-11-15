@@ -1,3 +1,10 @@
+/*
+This code does three main thing:
+1. Creates a for loop that will add <tr> and <td> to html based on user input
+2. Creates an event listener for user input on grid size
+3. Creates an event listener for user input on color
+*/
+
 const table = $('#pixel_canvas');
 
 function makeGrid() {
